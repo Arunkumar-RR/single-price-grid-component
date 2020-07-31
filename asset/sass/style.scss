@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./mixin";
+
+@import "./component/attribution";
+@import "./component/price-grid";
+
+//global
+a
+{
+    text-decoration: none;
+    color: black;
+    &:hover
+    {
+        text-decoration: underline;
+    }
+}
+body
+{
+    height: 90vh;
+    font-family: $font-family;
+    background-color:  $background-color;
+    @include flex(column,center,center);
+}
+@include smartphone
+{
+    body
+    {
+        height:min-content;
+        font-family: $font-family;
+        background-color:  $background-color;
+        @include flex(column,center,center);
+    }
+}

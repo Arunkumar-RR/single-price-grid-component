@@ -1,0 +1,40 @@
+.attribution
+{
+    padding: 0;
+    position: relative;
+    top: 20%;
+    @include flex(row,center,center);
+    h6
+    {
+        margin: 10px 15px ;
+        font-size: $font-size-3;
+        font-weight: map-get($map: $font-weight, $key: regular );
+        a
+        {
+            font-weight: map-get($map: $font-weight, $key: bold );
+            color: $primary-color;
+        }
+    }
+}
+@include smartphone
+{
+    .attribution
+    {
+        text-align: center;
+        padding: 0;
+        position: relative;
+        top: 30px;
+        @include flex(column-reverse,center,center);
+        h6
+        {
+            margin: 10px 15px ;
+            font-size: $font-size-3;
+            font-weight: map-get($map: $font-weight, $key: regular );
+            a
+            {
+                font-weight: map-get($map: $font-weight, $key: bold );
+                color: $primary-color;
+            }
+        }
+    }
+}
